@@ -1,19 +1,26 @@
 # Bubble Sort
 
 ---
-Bu algoritma bir diziyi sıralanmış ve sıralanmamış olarak ayırır. Bu sebeple dizinin son indeksinden sıralamaya başlarız. 
+Bubble Sort, veri yapılarındaki öğeleri sıralamak için kullanılan basit bir sıralama algoritmasıdır. Temel mantığı, dizi üzerinde tekrar tekrar geçerek bitişik öğeleri karşılaştırmak ve gerekirse yer değiştirmektir. Bu işlem, dizideki en büyük öğenin sona "kabarcık" gibi yükselmesini sağlar, bu yüzden adı "Bubble Sort"tur (Kabarcık Sıralama).
 
-Örnek bir dizi vermek gerekirse:
+**Algoritmanın Adımları**:
 
-20,35,-15,7,55,1,-22
- 
-Bu diziyi bubble sort a göre sıralayalım.Sıralama yaparken 0. indeksten başlayacağız ve bir sağındaki değerden büyük olup olamdığına bakacağız eğer büyükse yer değiştireceğiz ama küçükse herhangi bir işlem yapmayacağız.
+- Karşılaştırma ve Yer Değiştirme: Dizinin başından başlayarak, her çift bitişik öğeyi karşılaştırın. Eğer birinci öğe ikincisinden büyükse, yerlerini değiştirin. Bunu dizinin sonuna kadar tekrarlayın.
+
+- Tekrarlı Geçişler: Yukarıdaki adımı, dizideki her öğe doğru sıraya gelene kadar tekrar edin. Her tam geçiş sonunda, en büyük öğe dizinin sonuna yerleşeceği için, her yeni geçişte bir öncekinden bir adım daha az kontrol yapabilirsiniz.
+
+- Bitiş Koşulu: Dizi sıralandığında veya bir geçişte hiçbir yer değiştirme yapılmadığında algoritma sona erer.
+
+**Özellikleri**:
+
+- Zaman Karmaşıklığı: En kötü ve ortalama durumda O(n²) zaman karmaşıklığına sahiptir, burada 'n' dizideki öğe sayısını ifade eder. Bu, büyük veri kümeleri için verimsiz olduğu anlamına gelir.
+- Kararlılık: Eşit öğelerin sıralama sonrası sırası korunduğundan, Bubble Sort kararlı bir algoritmadır.
+- Yerinde Sıralama: Bubble Sort, ekstra bellek kullanmadan diziyi yerinde sıralar (in-place).
+- Basitlik: Algoritma, anlaşılması ve uygulanması çok basittir.
 
 
-## Adım-1
-   20,35,-15,7,55,1,-22 -->>  20 ve 35 i karşılaştırdım 20 < 35 old için bir işlem yapmıyorum .
-20,35,-15,7,55,1,-22 -->> 35 ve -15 i karşılaştırdım 35 > -15 oldu için ikisini yer değiştiriyorum.
-Bu işlemi dizinin son elemanına gelene kadar yaptıktan sonra dizimiz
-   20,-15,7,35,1,-22,55 şeklinde olacaktır.
+**Örnek Kullanım Senaryoları** :
 
-Bu durumda dizinin 6. indexi sıralanmış oluyor ve artık dizimizin boyutu 5. indexe kadar gidiyor. Çünkü buuble sort da 
+Küçük veri kümeleri veya zaten neredeyse sıralanmış veriler.
+Basit ve öğretici amaçlar, özellikle sıralama algoritmalarını öğrenirken.
+Bubble Sort, düşük verimliliği nedeniyle büyük veri kümelerinde kullanım için uygun değildir.
